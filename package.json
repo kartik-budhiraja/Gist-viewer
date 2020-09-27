@@ -2,7 +2,7 @@
   "name": "gist-assessment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kartik-budhiraja.github.io/gist-viewer",
+  "homepage": "https://kartik-budhiraja.github.io/Gist-viewer",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
