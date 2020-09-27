@@ -94,23 +94,30 @@ const Table = ({ data }) => {
           title="Description"
           dataIndex="description"
           name="description"
+          width="40%"
+          ellipsis
+          render={(description) => description || "No Description"}
         />
         <Column
           title="Files"
           dataIndex="files"
           name="files"
+          width="30%"
           render={(files) =>
-            files.map((file) => (
-              <Tag className="language-tag" key={file.filename} color="blue">
-                {file.language}
-              </Tag>
-            ))
+            files.map((file) =>
+              file.language ? (
+                <Tag className="language-tag" key={file.filename} color="blue">
+                  {file.language}
+                </Tag>
+              ) : null
+            )
           }
         />
         <Column
           title="Forks"
           dataIndex="forkInfo"
           name="forkInfo"
+          width="20%"
           render={(forks) => (
             <Avatar.Group>
               {forks.map((fork) => (
@@ -128,6 +135,7 @@ const Table = ({ data }) => {
           title="Action"
           dataIndex="html_url"
           name="html_url"
+          width="10%"
           render={(url) => (
             <GithubOutlined
               className="github-icon"
